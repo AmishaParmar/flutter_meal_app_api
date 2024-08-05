@@ -99,10 +99,12 @@ class _AllRecipeState extends State<AllRecipe> {
                           },
                           keyboardType: TextInputType.name,
                           decoration: InputDecoration(
-                            border: OutlineInputBorder(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.black),
                               borderRadius: BorderRadius.circular(30),
                             ),
                             focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.black),
                               borderRadius: BorderRadius.circular(30),
                             ),
                             hintText: "Search Recipes",
@@ -115,7 +117,10 @@ class _AllRecipeState extends State<AllRecipe> {
                                       _notify();
                                       getAllRecipes();
                                     },
-                                    child: const Icon(Icons.close,size: 20,),
+                                    child: const Icon(
+                                      Icons.close,
+                                      size: 20,
+                                    ),
                                   )
                                 : const SizedBox(
                                     width: 0,
